@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
   <head>
     <meta charset="utf-8">
@@ -13,10 +9,29 @@
     <link rel="stylesheet" href="sender.css">
   </head>
   <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    
-    <script src="" async defer></script>
+    <div class="tooltips"></div>
+    <div class="name-setter">
+      <div class="mask"></div>
+      <div class="content">
+        <div class="group">
+          <input id="nick-input" type="text" placeholder="请输入弹幕发送昵称"/>
+          <button onclick="setName()">确定</button>
+        </div>
+        <div class="tips">只能设置一次！！！</div>
+      </div>
+    </div>
+    <div id="app">
+      <div class="title">
+        <p>「鹅厂这么大，我们一起闯」</p>
+        <p>弹幕发送系统</p>
+      </div>
+      <div class="nick">
+        <span>Nick:</span>
+        <span id="js-nick"></span>
+      </div>
+      <input id="danmu-input" type="text" placeholder="输入发送弹幕">
+      <button onclick="send()">发 送</button>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>

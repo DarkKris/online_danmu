@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+*:not(.title) {
+  font-size: 20px;
+}
+
+html, body, #app {
+  margin: 0;
+  padding: 0;
+
+  background: #2C2C2C;
+  color: rgb(190, 190, 190);
+  border-color: rgb(190, 190, 190);
+
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+input {
+  border-width: 1px;
+  border-radius: 10px;
+  border-style: solid;
+  padding: 5px 7px;
+  
+  width: 100%;
+}
+
+button {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+
+  width: 170px;
+  height: 50px;
+  margin-top:20px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 98%;
+  /* padding-bottom: 100px; */
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.title > p {
+  display: block;
+  margin: 5px 0;
+}
+
+.nick {
+  margin-bottom: 15px;
+}
+
+/* name setter */
+.name-setter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+  background: #2c2c2c;
+}
+
+.name-setter .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.name-setter .tips {
+  color: red;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.tooltips {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top .8s ease-in-out;
+  
+  background: rgb(190, 190, 190);
+
+  margin: 0 auto;
+  top: -42px;
+
+  color: #2c2c2c;
+
+  height: 40px;
+  width: 95vw;
+}
+
+.tooltips.active {
+  top: 5px;
+}
