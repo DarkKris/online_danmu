@@ -30,7 +30,7 @@ function recvMsg(content) {
 }
 
 function registerWs() {
-  ws = new WebSocket(`ws://deanti.wang/danmu/ws`);
+  ws = new WebSocket(`ws://danmu.deanti.wang/ws`);
 
   ws.open = () => {};
   ws.onmessage = (evt) => {
