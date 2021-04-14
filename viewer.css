@@ -1,0 +1,79 @@
+@font-face {
+  font-family: tencent;
+  src: url("./tencent.woff");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: tencent;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  background: #2C2C2C;
+  color: rgb(190, 190, 190);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  font-size: 45px;
+  height: 10vh;
+}
+
+.danmu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  margin-top: 4vh;
+
+  height: 80vh;
+  width: 100vw;
+
+  position: relative;
+  /* width: 150vw; */
+
+  /* left: -50vw; */
+
+  /* padding-bottom: 4vh; */
+}
+
+.danmu-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  flex: 1;
+  position: relative;
+}
+
+.danmu-element {
+  /* position: absolute; */
+  /* font-size: 30px; */
+  /* animation: danmu 1 15s linear; */
+}
+
+@keyframes danmu {
+  0% {
+    left: 150vw;
+  }
+
+  100% {
+    left: 0;
+  }
+}
