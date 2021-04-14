@@ -8,10 +8,10 @@ let len = container.length;
 let count = 0;
 
 window.onload = () => {
-  // registerWs();
+  registerWs();
   initDanmu();
   danmujs.start();
-  test();
+  // test();
 };
 
 function recvMsg(content) {
