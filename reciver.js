@@ -33,6 +33,7 @@ function registerWs() {
   ws = new WebSocket(`ws://danmu.deanti.wang/ws`);
 
   ws.open = (evt) => {
+    ws.send("test");
     console.log("onOpen", evt)
   };
   ws.onmessage = (evt) => {
