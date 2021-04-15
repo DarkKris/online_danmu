@@ -22,6 +22,7 @@ function recvMsg(content) {
     txt: content,
     style: {
       color: "rgb(250, 250, 250)",
+      // color: "#342E44",
       fontSize: '36px'
     },
     noDiscard: true,
