@@ -20,6 +20,8 @@ func init() {
 }
 
 func main() {
+	fmt.Printf("Start\n")
+	
 	// ws
 	go func(){
 		mux := http.NewServeMux()
