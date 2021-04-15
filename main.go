@@ -72,7 +72,7 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
   }
 	if len(req.Content) > 0 {
 		if len(req.Content) > 72 {
-			req.Content = req.Content[0: 72]
+			req.Content = req.Content[0: 72] + "..."
 		}
 		sendMsg(req.Content)
 	}
