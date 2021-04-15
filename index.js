@@ -284,5 +284,5 @@ function md5(string){
                 c=md5_AddUnsigned(c,CC);
                 d=md5_AddUnsigned(d,DD);
         }
-return (md5_WordToHex(a)+md5_WordToHex(b)+md5_WordToHex(c)+md5_WordToHex(d)).toLowerCase();
+        return (md5_WordToHex(a)+md5_WordToHex(b)+md5_WordToHex(c)+md5_WordToHex(d)).toLowerCase();
 }
