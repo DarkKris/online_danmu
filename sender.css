@@ -11,7 +11,7 @@ html, body, #app {
   margin: 0;
   padding: 0;
 
-  background: #2C2C2C;
+  background: #342E44;
   color: rgb(190, 190, 190);
   border-color: rgb(190, 190, 190);
 
@@ -100,6 +100,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 97vw;
 }
 
 .name-setter .tips {
