@@ -1,19 +1,20 @@
 import requests
 import time
+import json
 from concurrent.futures import ThreadPoolExecutor
 
 res = []
 
 def post_test():
     global res
-    url = 'http://localhost:6721'
-    res.append(requests.post(url, data={
+    url = 'http://danmu.deanti.wang/api'
+    res.append(requests.post(url, data=json.dumps({
         "content": "hello world",
-    }))
+    })))
 
 def main():
     global res
-    exe = ThreadPoolExecutor(max_workers=30)
+    exe = ThreadPoolExecutor(max_workers=100)
     times = 1000
     for i in range(times):
         exe.submit(post_test)
