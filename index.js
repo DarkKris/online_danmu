@@ -36,11 +36,12 @@ function send() {
   fetch("http://danmu.deanti.wang/api", {
     method: "POST",
     accept: "application/json",
-    "content-type": "application/json"
-  }, {
-    content: userNick + ": " + content
+    "content-type": "application/json",
+    body: JSON.stringify({
+      content: userNick + ": " + content
+    })
   }).then((resp) => {
-    if (resp.status === 0) {
+    if (resp.ok) {
       // send OK
       danmuBox.value = "";
       show("发送成功！");
