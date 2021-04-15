@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"regexp"
 	"time"
 
 	"golang.org/x/net/websocket"
@@ -70,13 +71,21 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
   if err != nil {
     fmt.Println(err.Error())
   }
-	if len(req.Content) > 0 {
-		if len(req.Content) > 215 {
+
+	nick := req.Nick
+	content := req.Content
+
+	if len(content) > 0 && len(nick) > 0 {
+		if len(content) > 200 || len(nick) > 80 {
 			// 截取超字符的
 			return
 			// req.Content = req.Content[0: 72] + "..."
 		}
-		sendMsg(req.Content)
+
+		msg := nick + ": " + content
+		reg, _ := regexp.Compile(`[^\\u4e00-\\u9fa5^a-z^A-Z^0-9]`)
+		msg = reg.ReplaceAllString(msg, "")
+		sendMsg(msg)
 	}
 }
 
@@ -100,4 +109,5 @@ type PostData struct {
 
 type Req struct {
 	Content string `json:"content"`
+	Nick string `json:"nick"`
 }

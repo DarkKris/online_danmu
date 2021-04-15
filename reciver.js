@@ -61,7 +61,7 @@ function initDanmu() {
     },
     live: true,
     bOffset: 20,
-    // channelSize: 100, // 轨道大小
+    channelSize: 70, // 轨道大小
     mouseControl: false, // 打开鼠标控制, 打开后可监听到 bullet_hover 事件。danmu.on('bullet_hover', function (data) {})
     mouseControlPause: false
   });
