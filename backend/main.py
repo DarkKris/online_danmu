@@ -2,6 +2,7 @@ import websockets
 import asyncio
 import threading
 import json
+import time
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 
@@ -40,10 +41,14 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.wfile.write(body.encode())
 
 
-async def ws_register(ws, path):
-    global wss
+async def ws_register(ws: websockets.WebSocketClientProtocol, path):
     wss.append(ws)
     print(ws, path)
+    while True:
+        try:
+            recv_text = await ws.recv()
+        except:
+            pass
 
 
 def run_serve():
