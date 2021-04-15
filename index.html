@@ -29,7 +29,7 @@
         <span>Nick:</span>
         <span id="js-nick"></span>
       </div>
-      <input id="danmu-input" type="text" maxlength="50" placeholder="输入发送弹幕（最长50）">
+      <input id="danmu-input" type="text" maxlength="50" placeholder="输入发送弹幕（最长50）" onkeydown="keyDown(event)">
       <button onclick="send()">发 送</button>
     </div>
     <script src="index.js"></script>

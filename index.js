@@ -83,5 +83,13 @@ function hidden() {
   }
 }
 
+function keyDown(e) {
+  var ev = window.event||e;
+  //13是键盘上面固定的回车键
+  if (ev.keyCode == 13) {
+    send();
+  }
+}
+
 
 // 1aniudvnuiabdofbaso8fgbcuansdouivnoaciuesbfocbwesnoiuvnapusdbvpaiubsdvucbaspudincaeouirbovuibescnawsuienfcauiwebsvui
