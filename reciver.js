@@ -1,4 +1,4 @@
-const DELAY = 15 * 1000;
+const DELAY = 12 * 1000;
 
 let danmujs = null;
 let ws = null;
@@ -57,7 +57,7 @@ function initDanmu() {
     },
     area: {  //弹幕显示区域
       start: 0, //区域顶部到播放器顶部所占播放器高度的比例
-      end: 0.9 //区域底部到播放器顶部所占播放器高度的比例
+      end: 1 //区域底部到播放器顶部所占播放器高度的比例
     },
     live: true,
     bOffset: 20,

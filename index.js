@@ -40,7 +40,7 @@ function setName() {
 
 function send() {
   const content = danmuBox.value;
-  if (content.length <= 0) {
+  if (content.length <= 0 || content === "") {
     return;
   }
 
@@ -61,7 +61,8 @@ function send() {
     accept: "application/json",
     "content-type": "application/json",
     body: JSON.stringify({
-      content: userNick + ": " + content
+      nick: userNick,
+      content: content
     })
   }).then((resp) => {
     if (resp.ok) {
