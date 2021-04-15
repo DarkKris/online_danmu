@@ -16,7 +16,6 @@ func init() {
 	params = Params{
 		WebSocketPort: ":9988",
 		ApiPort: ":6721",
-		htmlUrl: "../Web/OnlineRoom.html",
 	}
 }
 
@@ -79,7 +78,6 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 type Params struct {
 	WebSocketPort	string
 	ApiPort 		string
-	htmlUrl			string
 }
 
 /*
