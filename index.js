@@ -33,7 +33,8 @@ function setName() {
 
 function send() {
   const content = danmuBox.value;
-  fetch("http://danmu.deanti.wang/api", {
+  // fetch("http://danmu.deanti.wang/api", {
+  fetch("http://127.0.0.1:6721/api", {
     method: "POST",
     accept: "application/json",
     "content-type": "application/json",
