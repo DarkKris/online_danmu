@@ -71,8 +71,10 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Println(err.Error())
   }
 	if len(req.Content) > 0 {
-		if len(req.Content) > 72 {
-			req.Content = req.Content[0: 72] + "..."
+		if len(req.Content) > 215 {
+			// 截取超字符的
+			return
+			// req.Content = req.Content[0: 72] + "..."
 		}
 		sendMsg(req.Content)
 	}
