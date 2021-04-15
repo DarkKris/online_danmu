@@ -21,7 +21,7 @@ func init() {
 
 func main() {
 	fmt.Printf("Start\n")
-	
+
 	// ws
 	go func(){
 		mux := http.NewServeMux()
@@ -68,10 +68,12 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 	jsonDecoder := json.NewDecoder(r.Body)
 	err := jsonDecoder.Decode(&req)
   if err != nil {
-      fmt.Println(err.Error())
+    fmt.Println(err.Error())
   }
 
-	sendMsg(req.Content)
+	if len(req.Content) > 0 {
+		sendMsg(req.Content)
+	}
 }
 
 /*

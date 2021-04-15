@@ -3,6 +3,9 @@ const nameSetterBox = document.getElementsByClassName("name-setter")[0];
 const tooltipsBox = document.getElementsByClassName("tooltips")[0];
 const danmuBox = document.getElementById("danmu-input");
 
+const NICK_LIMIT = 20;
+const CONTENT_LIMIT = 50;
+
 const NICK_KEY = "danmu-user-name";
 
 let userNick = "";
@@ -22,6 +25,10 @@ function setName() {
   const input = document.getElementById("nick-input");
   const nick = input.value;
   if (!!nick) {
+    if (nick.length > NICK_LIMIT) {
+      alert(`昵称最长 ${NICK_LIMIT} 个字！(计算方式: js language nick.length)`);
+      return;
+    }
     userNick = nick;
     localStorage.setItem(NICK_KEY, nick);
     nameSetterBox.parentElement.removeChild(nameSetterBox);
@@ -33,6 +40,10 @@ function setName() {
 
 function send() {
   const content = danmuBox.value;
+  if (content > CONTENT_LIMIT) {
+    alert(`内容最长 ${CONTENT_LIMIT} 个字！(计算方式: js language content.length)`)
+    return;
+  }
   fetch("http://danmu.deanti.wang/api", {
   // fetch("http://127.0.0.1:6721/api", {
     method: "POST",
