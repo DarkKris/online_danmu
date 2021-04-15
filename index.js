@@ -6,7 +6,7 @@ const danmuBox = document.getElementById("danmu-input");
 const NICK_LIMIT = 20;
 const CONTENT_LIMIT = 50;
 
-const NICK_KEY = "danmu-user-name";
+const NICK_KEY = "danmu-user-name" + (new Date()).toDateString();
 
 let userNick = "";
 
