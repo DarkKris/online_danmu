@@ -30,8 +30,8 @@ function recvMsg(content) {
 }
 
 function registerWs() {
-  // ws = new WebSocket(`ws://danmu.deanti.wang/ws`);
-  ws = new WebSocket(`ws://127.0.0.1:9988/ws`);
+  ws = new WebSocket(`ws://danmu.deanti.wang/ws`);
+  // ws = new WebSocket(`ws://127.0.0.1:9988/ws`);
 
   ws.open = (evt) => {
     ws.send("test");
