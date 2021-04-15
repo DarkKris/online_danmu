@@ -39,7 +39,7 @@ function setName() {
 }
 
 function send() {
-  const content = danmuBox.value;
+  const content = String(danmuBox.value).trim();
   if (content.length <= 0 || content === "") {
     return;
   }

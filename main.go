@@ -82,10 +82,10 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 			// req.Content = req.Content[0: 72] + "..."
 		}
 
-		msg := nick + ": " + content
 		reg, _ := regexp.Compile(`[^\\u4e00-\\u9fa5^a-z^A-Z^0-9]`)
-		msg = reg.ReplaceAllString(msg, "")
-		sendMsg(msg)
+		nick = reg.ReplaceAllString(nick, "")
+		content = reg.ReplaceAllString(content, "")
+		sendMsg(nick + ": " + content)
 	}
 }
 
