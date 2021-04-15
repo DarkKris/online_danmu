@@ -21,7 +21,7 @@ function recvMsg(content) {
     duration: DELAY,
     txt: content,
     style: {
-      color: "rgb(190, 190, 190)",
+      color: "rgb(250, 250, 250)",
       fontSize: '36px'
     },
     noDiscard: true,
@@ -57,7 +57,7 @@ function initDanmu() {
     },
     area: {  //弹幕显示区域
       start: 0, //区域顶部到播放器顶部所占播放器高度的比例
-      end: 1 //区域底部到播放器顶部所占播放器高度的比例
+      end: 0.9 //区域底部到播放器顶部所占播放器高度的比例
     },
     live: true,
     bOffset: 20,

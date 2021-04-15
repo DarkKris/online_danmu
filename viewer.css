@@ -15,7 +15,7 @@ html, body {
   height: 100%;
 
   background: #342E44;
-  color: rgb(190, 190, 190);
+  color: rgb(250, 250, 250);
 }
 
 body {
@@ -76,4 +76,16 @@ body {
   100% {
     left: 0;
   }
+}
+
+.qrcode {
+  position: fixed;
+
+  bottom: 3vh;
+  left: 3vh;
+
+  width: 20vh;
+  height: 20vh;
+
+  background: center / contain url('./qrcode.png') no-repeat;
 }
