@@ -23,7 +23,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         print(content)
         for ws in wss:
             try:
-                ws.send(content)
+                await ws.send(content)
             except Exception as e:
                 print(e)
         self.Response("")
