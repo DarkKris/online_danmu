@@ -40,7 +40,7 @@ function setName() {
 
 function send() {
   const content = danmuBox.value;
-  if (content > CONTENT_LIMIT) {
+  if (content.length > CONTENT_LIMIT) {
     alert(`内容最长 ${CONTENT_LIMIT} 个字！(计算方式: js language content.length)`)
     return;
   }
@@ -82,3 +82,6 @@ function hidden() {
     tooltipsBox.classList.remove("active");
   }
 }
+
+
+// 1aniudvnuiabdofbaso8fgbcuansdouivnoaciuesbfocbwesnoiuvnapusdbvpaiubsdvucbaspudincaeouirbovuibescnawsuienfcauiwebsvui

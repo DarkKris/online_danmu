@@ -14,7 +14,7 @@
       <div class="mask"></div>
       <div class="content">
         <div class="group">
-          <input id="nick-input" type="text" placeholder="请输入弹幕发送昵称"/>
+          <input id="nick-input" type="text" maxlength="20" placeholder="请输入弹幕发送昵称（最长20）"/>
           <button onclick="setName()">确定</button>
         </div>
         <div class="tips">只能设置一次！！！</div>
@@ -29,7 +29,7 @@
         <span>Nick:</span>
         <span id="js-nick"></span>
       </div>
-      <input id="danmu-input" type="text" placeholder="输入发送弹幕">
+      <input id="danmu-input" type="text" maxlength="50" placeholder="输入发送弹幕（最长50）">
       <button onclick="send()">发 送</button>
     </div>
     <script src="index.js"></script>
