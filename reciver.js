@@ -32,9 +32,18 @@ function recvMsg(content) {
 function registerWs() {
   ws = new WebSocket(`ws://danmu.deanti.wang/ws`);
 
-  ws.open = () => {};
+  ws.open = (evt) => {
+    console.log("onOpen", evt)
+  };
   ws.onmessage = (evt) => {
+    console.log("onMessage", evt);
     recvMsg(evt.data)
+  }
+  ws.onerror = (evt) => {
+    console.error("ws error", evt);
+  },
+  ws.onclose = (evt) => {
+    console.warn("onClose", evt);
   }
 }
 
