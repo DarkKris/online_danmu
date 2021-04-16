@@ -23,7 +23,8 @@ function recvMsg(content) {
     style: {
       color: "rgb(250, 250, 250)",
       // color: "#342E44",
-      fontSize: '36px'
+      fontSize: '36px',
+      overflow: 'hidden',
     },
     noDiscard: true,
   });
