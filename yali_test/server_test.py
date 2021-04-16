@@ -17,14 +17,15 @@ def post_test():
     global res
     url = 'http://danmu.deanti.wang/api'
     string = bytes()
-    for letter in 'hhhhhh':
+    for letter in 'h':
         string += letter.encode('utf-8')
-        head_tail = append_head_tail(['\u0326'] * 16)
+        head_tail = append_head_tail(['\u035a', '\u036f'] * 40)
         string += head_tail
     try:
         res.append(requests.post(url, data=json.dumps({
             "content": string.decode('utf-8'),
-            "nick": "hhh",
+            # "content": "你好",
+            "nick": "a",
         }).encode('utf-8')))
     except Exception as e:
         print(e)
@@ -33,7 +34,7 @@ def post_test():
 def main():
     global res
     exe = ThreadPoolExecutor(max_workers=100)
-    times = 1000
+    times = 10
     for i in range(times):
         exe.submit(post_test)
     while len(res) < times:
